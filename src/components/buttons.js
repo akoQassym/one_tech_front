@@ -19,6 +19,41 @@ const StyledPassButton = styled(Button)`
     }
 `
 
+const StyledBannerButton = styled(Button)`
+    && {
+        padding: 15px 25px;
+        margin: 3rem 0 20px 0;
+        background-color: ${(props) => props.theme.colors.white};
+        color: ${(props) => props.theme.colors.forteMain};
+        width: 200px;
+        border-radius: 4px;
+        text-transform: none;
+        font-size: ${(props) => props.theme.fontSizes.text2Size};
+        font-weight: bold;
+    }
+    &&:disabled{
+        opacity: 30%;
+    }
+`
+
+const StyledBuyCardButton = styled(Button)`
+    && {
+        padding: 10px 32px;
+        margin: 15px 0 10px;
+        width: 16px;
+        background-color: ${(props) => props.theme.colors.darkBlue};
+        color: white;
+        width: 200px;
+        border-radius: 4px;
+        text-transform: none;
+        font-size: ${(props) => props.theme.fontSizes.text2Size};
+        font-weight: bold;
+    }
+    &&:disabled{
+        opacity: 30%;
+    }
+`
+
 export const PassSubmitButton = ({ children }) => {
     return (
         <StyledPassButton
@@ -27,3 +62,18 @@ export const PassSubmitButton = ({ children }) => {
     )
 }
 
+export const BannerButton = ({ children }) => {
+    return (
+        <StyledBannerButton 
+            variant="contained"
+        >{children}</StyledBannerButton>
+    )
+}
+
+export const BuyCardButton =  ({ children }) => {
+    return (
+        <StyledBuyCardButton
+            variant="contained"
+        >{children}</StyledBuyCardButton>
+    )
+}
