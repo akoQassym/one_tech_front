@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Pages
 import PasswordPage from './pages/passwordPage/mainFile';
@@ -8,16 +8,11 @@ const App = () => {
     return (
         <Router>
             <Switch>
-                <Route exact path="/" component={Redirection} />
-                <Route path="/h1" component={PasswordPage} />
-                <Route path="/h2" component={LandingBankPage} />
+                <Route exact path="/" component={LandingBankPage} />
+                <Route path="/password" component={PasswordPage} />
             </Switch>
         </Router>
     );
-}
-
-function Redirection() {
-    return <Redirect to="/h1"/>
 }
 
 export default App;

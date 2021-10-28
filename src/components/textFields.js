@@ -27,3 +27,18 @@ export const StyledPasswordInput = ({
         />
     )
 }
+
+const StyledCurrencyInput = styled.input`
+    border: none;
+    font-size: ${(props) => props.theme.fontSizes.cardName};
+    padding: 8px 0;
+    background-color: ${(props) => props.theme.colors.milkyGray};
+    outline: none;
+    font-family: 'Rubik', sans-serif;
+`
+
+export const CurrencyInput = ({disabled, convertationResult, onChange, value}) => {
+    return (
+        <StyledCurrencyInput onChange={onChange} value={value} disabled={disabled} convertationResult={convertationResult} type="number" min={0.1} required/>
+    )
+}

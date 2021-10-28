@@ -5,6 +5,12 @@ import Header from './header/index';
 import Subheader from './subheader/index';
 import Banner from './banner/index';
 import CreditCards from './creditCards/index';
+import CreditCalculator from './creditCalculator/index';
+import Features from './features/index';
+import Faq from './faq/index';
+import MobileBannerSection from './mobileBanner/index';
+import Currency from './currency/index';
+import Footer from './footer/index';
 
 export default function MainFile() {
     return (
@@ -13,6 +19,12 @@ export default function MainFile() {
             <Subheader />
             <Banner />
             <CreditCards />
+            <CreditCalculator />
+            <Features />
+            <Faq />
+            <MobileBannerSection />
+            <Currency />
+            <Footer />
         </LandingWrapper>
     )
 }

@@ -1,7 +1,10 @@
 import React from 'react';
+import Carousel from 'react-material-ui-carousel';
+
 import { SectionWrapper, CardWrapper } from '../../../components/wrappers';
 import { CardImgWrapper } from '../../../components/images';
 import { BuyCardButton } from '../../../components/buttons';
+import { SectionTitle } from '../../../components/titles';
 
 // Images
 import ClassicCard from '../../../assets/classicCard.png';
@@ -11,7 +14,7 @@ import PlatinumCard from '../../../assets/platinumCard.png';
 export default function CardsSection() {
     return (
         <SectionWrapper>
-            <p className="section-title">Forte карты</p>
+            <SectionTitle>Forte карты</SectionTitle>
             <div className="card-div">
                 <CardWrapper>
                     <CardImgWrapper src={ClassicCard} alt="Classic Card" />
@@ -38,6 +41,14 @@ export default function CardsSection() {
                     <BuyCardButton>Заказать карту</BuyCardButton>
                 </CardWrapper>
             </div>
+            <Carousel
+                autoPlay={false}
+                navButtonsAlwaysInisible={true}
+            >
+                <div></div>
+                <div></div>
+                <div></div>
+            </Carousel>
         </SectionWrapper>
     )
 }
