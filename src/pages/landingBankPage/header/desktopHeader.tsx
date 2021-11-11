@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
@@ -63,7 +64,7 @@ const DesktopHeader: React.FC = () => {
                 </Stack>
 
                 <HeaderLinksWrapper>
-                    <li className="selected">Банк</li>
+                    <li className="selected"><Link to="/bank">Банк</Link></li>
                     <li>Маркет</li>
                     <li>Mobile</li>
                     <li>Путешествия</li>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { SubheaderWrapper, SubheaderElement } from './style.module';
 import { LogoWrapper } from '../../../components/images';
@@ -10,10 +11,12 @@ const Subheader: React.FC = () => {
             {
                 subheaders.map((subheaderElement, key) => {
                     return (
-                        <SubheaderElement key={key}>
-                            <LogoWrapper src={subheaderElement.img} alt={subheaderElement.alt}/>
-                            <p>{subheaderElement.name}</p>
-                        </SubheaderElement>
+                        <Link to={subheaderElement.href} style={{textDecoration: 'none', color: 'inherit'}}>
+                            <SubheaderElement key={key}>
+                                <LogoWrapper src={subheaderElement.img} alt={subheaderElement.alt}/>
+                                <p>{subheaderElement.name}</p>
+                            </SubheaderElement>
+                        </Link>
                     )
                 })
             }

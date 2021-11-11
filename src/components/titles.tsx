@@ -55,7 +55,7 @@ const StyledBlockTitle = styled.p`
     font-size: ${(props) => props.theme.fontSizes.cardName} !important;
     color: ${(props) => props.theme.colors.darkBlue};
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 `
 
 export const BlockTitle = (props: {children: React.ReactNode}) => {

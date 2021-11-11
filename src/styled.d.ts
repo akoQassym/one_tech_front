@@ -13,6 +13,7 @@ declare module 'styled-components' {
         gradientColor2: string,
         darkGray: string,
         lightGray: string,
+        gray: string,
         milkyGray: string,
         anotherBlue: string
     },

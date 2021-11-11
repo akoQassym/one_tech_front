@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
@@ -28,12 +29,12 @@ const MobileHeader: React.FC = () => {
     return (
         <HeaderWrapper>
             <SideMenu style={{left: menuClicked ? '0px' : '-250px'}}>
-                <a className="selected">Банк</a>
-                <a>Маркет</a>
-                <a>Mobile</a>
-                <a>Путешествия</a>
-                <a>Бизнес</a>
-                <a>Club</a>
+                <Link to="/bank" className="selected">Банк</Link>
+                <Link to="/#">Маркет</Link>
+                <Link to="/#">Mobile</Link>
+                <Link to="/#">Путешествия</Link>
+                <Link to="/#">Бизнес</Link>
+                <Link to="/#">Club</Link>
                 <IconButton area-label="close" onClick={handleCloseBtnClick}>
                     <CloseIcon sx={{color: theme.colors.white}}/>
                 </IconButton>

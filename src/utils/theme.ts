@@ -3,7 +3,7 @@ import { DefaultTheme } from "styled-components";
 const theme: DefaultTheme = {
     colors: {
         forteMain: '#9D2550',
-        lightForteMain: '#d65481',
+        lightForteMain: '#9D255066',
         textBlack: '#303030',
         darkBlue: '#1E2A41',
         milky: '#F8F8F8',
@@ -13,6 +13,7 @@ const theme: DefaultTheme = {
         darkGray: '#737373',
         lightGray: '#E0E0E0',
         milkyGray: '#f2f2f2',
+        gray: '#F5F5F5',
         anotherBlue: '#0E2B91'
     },
     fontSizes: {

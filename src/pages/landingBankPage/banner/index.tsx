@@ -1,7 +1,6 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import Indicator from '../../../assets/Indicator.svg';
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { 
     BannerWrapper,
     TextBlock,
@@ -12,8 +11,6 @@ import {
     BannerButton
 } from './style.module';
 import { bannerElements } from './bannerElements';
-
-console.log(Indicator, FiberManualRecordIcon)
 
 const Banner: React.FC = () => {
     return (

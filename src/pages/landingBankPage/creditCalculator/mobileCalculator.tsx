@@ -26,10 +26,10 @@ const MIN_AMOUNT = 10000;
 const MIN_PERIOD = 6;
 
 const MobileCalculator: React.FC = () => {
-    const [moneyAmount, setMoneyAmount] = useState<number>(MIN_AMOUNT)
-    const [creditPeriod, setCreditPeriod] = useState<number>(MIN_PERIOD)
-    const [discount, setDiscount] = useState<boolean>(false)
-    const creditRate = discount ? 16.99 : 18.99
+    const [moneyAmount, setMoneyAmount] = useState<number>(MIN_AMOUNT);
+    const [creditPeriod, setCreditPeriod] = useState<number>(MIN_PERIOD);
+    const [discount, setDiscount] = useState<boolean>(false);
+    const creditRate = discount ? 16.99 : 18.99;
 
     const handleMoneyChange = (e: any) => {
         setMoneyAmount(parseInt(e.target.value));
@@ -39,10 +39,8 @@ const MobileCalculator: React.FC = () => {
         setCreditPeriod(parseInt(e.target.value));
     }
     
-    const handleSwitchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setDiscount(
-            e.target.value === 'true' ? true : false
-        );
+    const handleSwitchChange = () => {
+        setDiscount(prev => !prev);
     }
 
     const monthlyPaymentCalculation = () => {
@@ -83,7 +81,7 @@ const MobileCalculator: React.FC = () => {
                             </SliderRange>
                         </SliderDiv>
                     </SliderWrapper>
-
+                    
                     <Stack
                         direction="row"
                         justifyContent="space-between"
@@ -126,7 +124,7 @@ const MobileCalculator: React.FC = () => {
 
                     <MobileSwitchBlock>
                         <SwitchWrapper>
-                            <StyledSwitch checked={discount} onChange={(e) => handleSwitchChange(e)}/>
+                            <StyledSwitch checked={discount} onChange={handleSwitchChange}/>
                             <p>Я получаю запрплату по карте ForteBank</p>
                         </SwitchWrapper>
                         <UnfocusedText>
@@ -136,7 +134,6 @@ const MobileCalculator: React.FC = () => {
                     <CreditButton>Оформить кредит</CreditButton>
                 </CreditCalculatorRight>
             </CreditCalculatorGrid>
-            
         </>
     )
 }

@@ -16,7 +16,7 @@ const StyledHeaderWrapper = styled.section`
 
 export const SideMenu = styled.div`
     width: 200px;
-    height: 100vh;
+    height: 100%;
     padding: 5% 20px;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,7 @@ export const SideMenu = styled.div`
         padding: 10px 0;
         margin: 5px 0;
         font-size: ${(props) => props.theme.fontSizes.text3Size};
+        color: inherit;
     }
 
     & .selected {
@@ -63,6 +64,10 @@ const StyledHeaderLinksWrapper = styled.ul`
         cursor: pointer;
         font-weight: bold;
         transition: 0.1s all ease-in;
+        > a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 
     & .selected {
